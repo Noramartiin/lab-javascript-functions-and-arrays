@@ -1,18 +1,81 @@
 // Iteration #1: Find the maximum
 
+function maxOfTwoNumbers(num1,num2){
+  if (num1>num2){
+    console.log(num1);
+    return num1;
+    }  
+  else {
+        console.log(num2);
+    }
+  return num2;
+}
+maxOfTwoNumbers(2,7);
+
+
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
+function findLongestWord(myArr){
+  let longestWord= "";
+    for(let i=0; i<myArr.length; i++){
+      if(myArr[i].length>longestWord.length){
+      longestWord= myArr[i];
+      }
+    }
+    return longestWord;
+  }
+  
+   console.log(findLongestWord(words));
+
 // Iteration #3: Calculate the sum
+
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+function sumNumbers (myArr){
+  let sum=0;
+  for (let i=0; i<myArr.length; i++){
+    sum=sum+myArr[i]
+  }
+  return sum;
+  }
+
+let output = sumNumbers(numbers);
+console.log('The sum is', output);
+
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
+
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
+function averageNumbers(arr){
+  let sum=0;
+  for (let i=0; i<arr.length; i++){
+    sum=sum+arr[i];
+  }
+  return sum;
+  }
+
+let avg = averageNumbers(numbersAvg);
+console.log('The average is', avg/(numbersAvg.length));
+
+
 // Level 2: Array of strings
+//NAN!!!
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+
+function averageWordLength(arr){
+  let sum=0;
+  for (let i=0; i<arr.length; i++){
+    sum=sum+arr[i].length;
+  }
+  return sum;
+  }
+
+let prueba = averageWordLength(wordsArr);
+console.log('The average is', prueba/(averageWordLength));
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -30,7 +93,21 @@ const wordsUnique = [
 ];
 
 // Iteration #6: Find elements
+//Always false
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+
+function doesWordExist(array, word) { 
+  
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+      return true;
+    }
+   else{
+     return false;
+  }
+  }
+}
+console.log(doesWordExist('truth'));
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -46,6 +123,10 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+
+
+
 
 // Iteration #8: Bonus
 
